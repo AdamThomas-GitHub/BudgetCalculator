@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/value"
+        android:layout_above="@+id/shop_spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="74dp" />
+
+    <Spinner
+        android:id="@+id/shop_spinner"
+        android:layout_height="wrap_content"
+        android:layout_width="146dp"
+        android:entries="@array/type"
+        android:spinnerMode="dropdown"
+        android:layout_alignBaseline="@+id/people_spinner"
+        android:layout_alignBottom="@+id/people_spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/submit_button"
+        android:layout_toStartOf="@+id/submit_button"
+        android:layout_alignParentEnd="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_button"
+        android:id="@+id/submit_button"
+        android:layout_below="@+id/shop_spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:textColor="#ffffffff"/>
+
+    <Spinner
+        android:id="@+id/people_spinner"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:entries="@array/people"
+        android:spinnerMode="dropdown"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/submit_button"
+        android:layout_toEndOf="@+id/submit_button" />
+
+</RelativeLayout>
