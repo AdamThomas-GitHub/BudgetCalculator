@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Application/Budget Calculator.iml" filepath="$PROJECT_DIR$/Application/Budget Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Application/Application.iml" filepath="$PROJECT_DIR$/Application/Application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BudgetCalculator.iml" filepath="$PROJECT_DIR$/BudgetCalculator.iml" />
     </modules>
   </component>
 </project>

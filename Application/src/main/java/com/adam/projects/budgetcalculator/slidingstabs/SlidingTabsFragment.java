@@ -1,6 +1,7 @@
-package com.example.android.slidingtabsbasic;
+package com.adam.projects.budgetcalculator.slidingstabs;
 
-import com.example.android.common.view.SlidingTabLayout;
+import com.adam.projects.budgetcalculator.slidingtabsbasic.R;
+import com.adam.projects.budgetcalculator.view.SlidingTabLayout;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,14 +11,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 /**
- * A basic sample which shows how to use {@link com.example.android.common.view.SlidingTabLayout}
+ * A basic sample which shows how to use {@link com.adam.projects.budgetcalculator.view.SlidingTabLayout}
  * to display a custom {@link ViewPager} title strip which gives continuous feedback to the user
  * when scrolling.
  */
-public class SlidingTabsBasicFragment extends Fragment {
+public class SlidingTabsFragment extends Fragment {
 
     /**
      * A custom {@link ViewPager} title strip which looks much like Tabs present in Android v4.0 and

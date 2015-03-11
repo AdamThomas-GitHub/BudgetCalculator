@@ -2,25 +2,25 @@
 <items version="2" >
 
     <item
-        jar="/home/adam/Desktop/SlidingTabsBasic/Application/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
-        <dex dex="/home/adam/Desktop/SlidingTabsBasic/Application/build/intermediates/pre-dexed/debug/classes-926d9ebcc6c9a94d6f4a27908c03566f359670a4.jar" />
-    </item>
-    <item
-        jar="/home/adam/Desktop/SlidingTabsBasic/Application/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/libs/internal_impl-21.0.2.jar"
+        jar="/home/adam/AndroidStudioProjects/BudgetCalculator/Application/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/libs/internal_impl-21.0.2.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
-        <dex dex="/home/adam/Desktop/SlidingTabsBasic/Application/build/intermediates/pre-dexed/debug/internal_impl-21.0.2-9fb5b7f90d956e6fc4cec61d5ab5af22e5d7e232.jar" />
+        <dex dex="/home/adam/AndroidStudioProjects/BudgetCalculator/Application/build/intermediates/pre-dexed/debug/internal_impl-21.0.2-2c97e52485c881e4075b2fff3707b86ef120f142.jar" />
+    </item>
+    <item
+        jar="/home/adam/AndroidStudioProjects/BudgetCalculator/Application/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
+        <dex dex="/home/adam/AndroidStudioProjects/BudgetCalculator/Application/build/intermediates/pre-dexed/debug/classes-0105e93604c60efecbf9f3c9bf01a030b91c4999.jar" />
     </item>
     <item
         jar="/home/adam/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.2/support-annotations-21.0.2.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
-        <dex dex="/home/adam/Desktop/SlidingTabsBasic/Application/build/intermediates/pre-dexed/debug/support-annotations-21.0.2-75aa1fac5a02c6a605b6263492f69decccc8096d.jar" />
+        <dex dex="/home/adam/AndroidStudioProjects/BudgetCalculator/Application/build/intermediates/pre-dexed/debug/support-annotations-21.0.2-75aa1fac5a02c6a605b6263492f69decccc8096d.jar" />
     </item>
 
 </items>

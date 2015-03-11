@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.example.android.slidingtabsbasic;
+package com.adam.projects.budgetcalculator.slidingtabsbasic;
 
 public final class R {
     public static final class array {
