@@ -1,4 +1,4 @@
-package com.adam.projects.budgetcalculator.slidingtabsbasic;
+package com.adam.projects.budgetcalculator.MainActivity;
 
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.adam.projects.budgetcalculator.databasehelper.DatabaseHelper;
 import com.adam.projects.budgetcalculator.slidingstabs.SlidingTabsFragment;
+import com.adam.projects.budgetcalculator.slidingtabsbasic.R;
 
 
 public class MainActivity extends FragmentActivity {
