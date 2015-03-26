@@ -1,8 +1,11 @@
 package com.adam.projects.budgetcalculator.slidingstabs;
 
-import com.adam.projects.budgetcalculator.slidingtabsbasic.R;
+import com.adam.projects.budgetcalculator.databasehelper.DatabaseHelper;
+import com.adam.projects.budgetcalculator.mainactivity.Page1;
+import com.adam.projects.budgetcalculator.mainactivity.R;
 import com.adam.projects.budgetcalculator.view.SlidingTabLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
@@ -11,14 +14,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
 
-/**
- * A basic sample which shows how to use {@link com.adam.projects.budgetcalculator.view.SlidingTabLayout}
- * to display a custom {@link ViewPager} title strip which gives continuous feedback to the user
- * when scrolling.
- */
 public class SlidingTabsFragment extends Fragment {
 
+    Button button;
+    EditText editText;
+    Spinner type;
+    Spinner person;
+    DatabaseHelper databaseHelper;
     /**
      * A custom {@link ViewPager} title strip which looks much like Tabs present in Android v4.0 and
      * above, but is designed to give continuous feedback to the user when scrolling.
@@ -83,10 +89,6 @@ public class SlidingTabsFragment extends Fragment {
             return 3;
         }
 
-        /**
-         * @return true if the value returned from {@link #instantiateItem(ViewGroup, int)} is the
-         * same object as the {@link View} added to the {@link ViewPager}.
-         */
         @Override
         public boolean isViewFromObject(View view, Object o) {
             return o == view;
@@ -120,6 +122,29 @@ public class SlidingTabsFragment extends Fragment {
                 case 0:
                     view = getActivity().getLayoutInflater().inflate(R.layout.page1,
                             container, false);
+
+                    button = (Button) view.findViewById(R.id.submit_button);
+                    editText = (EditText) view.findViewById(R.id.value);
+                    person = (Spinner) view.findViewById(R.id.people_spinner);
+                    type = (Spinner) view.findViewById(R.id.shop_spinner);
+
+                    button.setOnClickListener(new View.OnClickListener() {
+
+                        @Override
+                        public void onClick(View arg0) {
+                            databaseHelper = new DatabaseHelper(getActivity());
+                            databaseHelper.insert(Integer.valueOf(editText.getText().toString()),type.getSelectedItem().toString(),person.getSelectedItem().toString());
+
+                            Log.i("INFO", editText.getText().toString());
+                            Log.i("INFO", person.getSelectedItem().toString());
+                            Log.i("INFO", type.getSelectedItem().toString());
+
+                            editText.setText("");
+
+
+                        }
+
+                    });
                     break;
                 case 1:
                     view = getActivity().getLayoutInflater().inflate(R.layout.pager_item,
@@ -133,11 +158,6 @@ public class SlidingTabsFragment extends Fragment {
             }
             // Add the newly created View to the ViewPager
             container.addView(view);
-
-            // Retrieve a TextView from the inflated View, and update it's text
-         //   TextView title = (TextView) view.findViewById(R.id.item_title);
-      //      title.setText(String.valueOf(position + 1));
-       //     Log.i("INFO", ""+title.getText());
 
             // Return the View
             return view;

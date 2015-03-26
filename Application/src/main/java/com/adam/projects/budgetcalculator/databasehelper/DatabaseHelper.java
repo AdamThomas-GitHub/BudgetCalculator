@@ -7,6 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "budgetcalculator.db";
@@ -28,13 +31,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public void insert() {
+    public void insert(Integer value, String type, String user) {
+
 
         ContentValues cv=new ContentValues();
-        cv.put("timeStamp", "2015-03-11 13:00:00");
-        cv.put("value", "25.00");
-        cv.put("type", "Rent");
-        cv.put("user", "Adam");
+        cv.put("timeStamp", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+        cv.put("value", value);
+        cv.put("type", type);
+        cv.put("user", user);
 
         getWritableDatabase().insert("expenses", "name", cv);
     }
